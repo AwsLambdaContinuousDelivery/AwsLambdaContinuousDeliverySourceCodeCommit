@@ -5,7 +5,7 @@
 from troposphere import Template, Sub, Parameter, Ref
 from troposphere.codepipeline import ( Stages
                                      , Actions
-                                     , ActionTypeID
+                                     , ActionTypeId
                                      , OutputArtifacts
                                      )
 
@@ -23,7 +23,7 @@ def getCodeCommit(t: Template, outputfiles: str) -> Stages:
              , Type="String"
              ) 
     )
-  actionId = ActionTypeID( Category = "Source"
+  actionId = ActionTypeId( Category = "Source"
                          , Owner = "AWS"
                          , Version = "1"
                          , Provider = "CodeCommit"
